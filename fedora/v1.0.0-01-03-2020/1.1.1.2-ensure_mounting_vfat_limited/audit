@@ -1,0 +1,3 @@
+grep -E -i '\svfat\s' /etc/fstab
+modprobe -n -v vfat
+lsmod | grep vfat

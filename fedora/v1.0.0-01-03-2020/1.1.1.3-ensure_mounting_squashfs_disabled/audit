@@ -1,0 +1,2 @@
+modprobe -n -v squashfs
+lsmod | grep squashfs

@@ -1,0 +1,7 @@
+#! /bin/sh
+
+cat << _EOF > /etc/modprobe.d/udf.conf
+install /bin/true
+_EOF
+
+rmmod udf

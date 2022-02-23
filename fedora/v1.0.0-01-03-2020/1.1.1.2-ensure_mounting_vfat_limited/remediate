@@ -1,0 +1,7 @@
+#! /bin/sh
+
+cat << _EOF > /etc/modprobe.d/vfat.conf
+install vfat /bin/true
+_EOF
+
+rmmod vfat

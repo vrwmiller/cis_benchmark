@@ -1,0 +1,8 @@
+#! /bin/sh
+
+cat << _EOF > /etc/systemd/system/local-fs.target.wants/tmp.mount
+[Mount]
+Options=mode=1777,strictatime,noexec,nodev,nosuid
+_EOF
+
+mount -o remount,nodev /tmp

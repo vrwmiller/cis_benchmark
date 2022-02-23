@@ -1,0 +1,2 @@
+modprobe -n -v cramfs
+lsmod | grep cramfs

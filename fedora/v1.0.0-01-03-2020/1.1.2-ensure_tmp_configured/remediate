@@ -1,0 +1,10 @@
+systemctl unmask tmp.mount
+systemctl enable tmp.mount
+
+cat >> _EOF > /etc/systemd/system/local-fs.target.wants/tmp.mount
+[Mount]
+What=tmpfs
+Where=/tmp
+Type=tmpfs
+Options=mode=1777,strictatime,noexec,nodev,nosuid
+_EOF
