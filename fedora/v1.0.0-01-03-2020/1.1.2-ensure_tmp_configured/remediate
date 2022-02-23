@@ -1,6 +1,8 @@
 systemctl unmask tmp.mount
 systemctl enable tmp.mount
 
+mkdir -p /etc/systemd/system/local-fs.target.wants
+
 cat << _EOF > /etc/systemd/system/local-fs.target.wants/tmp.mount
 [Mount]
 What=tmpfs
